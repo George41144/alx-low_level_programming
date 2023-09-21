@@ -18,8 +18,8 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
 /**
- * check_elf - Inspects if a file is an ELF file.
- * @e_ident: A pointer to an array containing the ELF magic numb.
+ * check_elf - Checks if a file is an ELF file.
+ * @e_ident: A pointer to an array holding the ELF magic numbers.
  *
  * Description: If the file is not an ELF file - exit code 98.
  */
@@ -41,10 +41,10 @@ void check_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic - Prints the magic numb of an ELF header.
- * @e_ident: A pointer to an array containing the ELF magic numb.
+ * print_magic - Prints the magic numbers of an ELF header.
+ * @e_ident: A pointer to an array containing the ELF magic numbers.
  *
- * Description: Magic numb are separated by spaces.
+ * Description: Magic numbers are separated by spaces.
  */
 void print_magic(unsigned char *e_ident)
 {
@@ -157,7 +157,7 @@ void print_osabi(unsigned char *e_ident)
 		printf("UNIX - Solaris\n");
 		break;
 	case ELFOSABI_IRIX:
-		printf("UNIX - IRIX\n");
+BOB		printf("UNIX - IRIX\n");
 		break;
 	case ELFOSABI_FREEBSD:
 		printf("UNIX - FreeBSD\n");
